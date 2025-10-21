@@ -1,0 +1,180 @@
+@use "sass:color";
+
+// Color Variables
+$white-translucent: #f8f8f8cc;
+$yellow-primary: #f5b40c;
+$white-pure: #f8f8f8;
+$black-pure: #0a0a0a;
+$black-translucent: #0a0a0a99;
+$gray-light: #e3e3e3;
+
+// Gotham Font Faces
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+// Nort Font Faces
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Ultra.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nort";
+  src: url("/assets/fonts/nort/fonnts.com-Nort.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Global Styles
+body {
+  background-color: $black-pure;
+  color: $white-pure;
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+
+// Font Family Helper Classes
+.Gotham {
+  font-family: "Gotham", sans-serif;
+}
+
+.Nort {
+  font-family: "Nort", sans-serif;
+}
+// Navbar Styles
+header {
+  nav {
+    .navbar_link {
+      display: block;
+      padding: 12px 20px;
+      color: $white-translucent;
+      cursor: pointer;
+      transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+      &:hover {
+        color: $white-pure;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+
+.btn {
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.primary_btn {
+  padding: 12px 16px;
+  border: 1px solid $yellow-primary;
+  color: $yellow-primary;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.nav_banner {
+  color: $gray-light;
+}
+
+
