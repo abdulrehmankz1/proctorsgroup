@@ -11,56 +11,64 @@ $gray-light: #e3e3e3;
 // Gotham Font Faces
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf")
+    format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf")
+    format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf")
+    format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf")
+    format("opentype");
   font-weight: 900;
   font-style: normal;
 }
@@ -82,7 +90,8 @@ $gray-light: #e3e3e3;
 
 @font-face {
   font-family: "Nort";
-  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf") format("opentype");
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
 }
@@ -132,7 +141,6 @@ body {
   padding: 0;
 }
 
-
 // Font Family Helper Classes
 .Gotham {
   font-family: "Gotham", sans-serif;
@@ -146,7 +154,7 @@ header {
   nav {
     .navbar_link {
       display: block;
-      padding: 12px 20px;
+      padding: 24px 20px;
       color: $white-translucent;
       cursor: pointer;
       transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -159,14 +167,13 @@ header {
   }
 }
 
-
 .btn {
   border-radius: 12px;
   cursor: pointer;
 }
 
 .primary_btn {
-  padding: 12px 16px;
+  // padding: 12px 16px;
   border: 1px solid $yellow-primary;
   color: $yellow-primary;
   text-transform: uppercase;
@@ -177,4 +184,6 @@ header {
   color: $gray-light;
 }
 
-
+.hero_section {
+  background: url("/assets/images/hero-section.webp") center/cover no-repeat;
+}
