@@ -186,4 +186,32 @@ header {
 
 .hero_section {
   background: url("/assets/images/hero-section.webp") center/cover no-repeat;
+  padding-bottom: 160px;
+  padding-top: 400px;
+  width: 100%;
+}
+h1 {
+  font-size: 86px;
+  line-height: 1.2;
+  font-weight: 100;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.4;
+  color: $yellow-primary;
+  font-size: 14px;
+  letter-spacing: 1.28px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background-color: $yellow-primary;
+    margin-right: 15px;
+    top: -3px;
+    position: relative;
+  }
 }
