@@ -1,3 +1,4 @@
+import About from "./components/About";
 import HeroSection from "./components/HeroSection";
 import HeroVideo from "./components/HeroVideo";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <HeroVideo />
       <OurClients />
+      <About />
     </>
   );
 }
