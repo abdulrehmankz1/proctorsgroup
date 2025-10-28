@@ -40,7 +40,7 @@ const About = () => {
         </p>
 
         <div>
-          <a href="/" className="arow_link mt-12">
+          <a href="/" className="arow_link mt-12 black_pure_text">
             <span>Let's talk</span>
             <span className="icon">
               <MoveRight />
