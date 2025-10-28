@@ -93,16 +93,6 @@ const WorkWidthUs = () => {
           />
         </div>
       </div>
-
-      {/* Continue normal vertical scroll after cards */}
-      <div className="container mx-auto py-32">
-        <h3 className="text-3xl font-semibold mb-6">Next Section Title</h3>
-        <p className="max-w-2xl text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          suscipit, eros at imperdiet vehicula, neque justo suscipit sapien, nec
-          bibendum orci urna id libero.
-        </p>
-      </div>
     </section>
   );
 };
