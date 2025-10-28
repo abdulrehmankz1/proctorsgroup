@@ -11,64 +11,56 @@ $gray-light: #e3e3e3;
 // Gotham Font Faces
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
@@ -90,8 +82,7 @@ $gray-light: #e3e3e3;
 
 @font-face {
   font-family: "Nort";
-  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf")
-    format("opentype");
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
@@ -210,9 +201,29 @@ h3 {
   line-height: 1.3;
 }
 
+h4 {
+  font-size: 46px;
+  font-weight: 200;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1.4;
+}
+
 p {
   font-size: 18px;
   line-height: 1.55;
+  font-weight: 300;
+}
+
+.service_card_text {
+  font-size: 16px !important;
+  font-family: "Nort", sans-serif;
+
+  line-height: 1.6;
   font-weight: 300;
 }
 
@@ -264,16 +275,14 @@ p {
 
   .logo-overlay {
     z-index: 10;
-    background-image: linear-gradient(
-      90deg,
-      #0a0a0a,
-      #0a0a0a8c 10%,
-      #0a0a0a14 30%,
-      #0a0a0a00 50%,
-      #0a0a0a0d 70%,
-      #0a0a0a8c 90%,
-      #0a0a0a
-    );
+    background-image: linear-gradient(90deg,
+        #0a0a0a,
+        #0a0a0a8c 10%,
+        #0a0a0a14 30%,
+        #0a0a0a00 50%,
+        #0a0a0a0d 70%,
+        #0a0a0a8c 90%,
+        #0a0a0a);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -372,7 +381,7 @@ p {
   &::after {
     content: "";
     position: absolute;
-    bottom: -5px; 
+    bottom: -5px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -381,7 +390,7 @@ p {
     transform: scaleX(1);
     transition: transform 0.35s ease-out, height 0.3s ease,
       background-color 0.3s ease;
-    will-change: transform; 
+    will-change: transform;
     backface-visibility: hidden;
   }
 
@@ -420,8 +429,8 @@ p {
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.7s ease,
     backdrop-filter 2s ease 0.5s,
-    /* Gradual blur increase over 2s, starting after 0.5s */ -webkit-backdrop-filter
-      2s ease 0.5s;
+    /* Gradual blur increase over 2s, starting after 0.5s */
+    -webkit-backdrop-filter 2s ease 0.5s;
   /* Same for webkit */
 
   will-change: transform, opacity, backdrop-filter, -webkit-backdrop-filter;
@@ -433,4 +442,8 @@ p {
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.services_section {
+  background: url("/assets/images/hero-section.webp") center/cover no-repeat;
 }
