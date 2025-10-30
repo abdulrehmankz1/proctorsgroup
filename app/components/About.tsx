@@ -7,11 +7,11 @@ const About = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 80%", "end 10%"], // control when animation starts & ends
+    offset: ["start 60%", "end 120%"],
   });
 
   const text =
-    "P+S is one of the UK’s longest-established full is  full  service of marketing agencies, offering business-to-business marketing strategy, branding and technology.";
+    "P+S is one of the UK’s longest-established full is full service of marketing agencies, offering business-to-business marketing strategy, branding and technology.";
 
   const words = text.split(" ");
 
@@ -22,9 +22,9 @@ const About = () => {
 
         <p className="about_text">
           {words.map((word, i) => {
-            // each word reveals in sequence
             const start = i / words.length;
-            const end = start + 0.1;
+            // make sure the end value never exceeds 1
+            const end = Math.min(start + 1 / words.length, 1);
             const opacity = useTransform(
               scrollYProgress,
               [start, end],
