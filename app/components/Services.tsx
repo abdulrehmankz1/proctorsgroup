@@ -65,12 +65,12 @@
 
 // export default Services;
 
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ServiceCard from './ServiceCard';
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ServiceCard from "./ServiceCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,25 +84,30 @@ const Services = () => {
 
   const servicesData = [
     {
-      title: 'Technology',
+      title: "Technology",
       description:
-        'Global and regional. Public and private. Enterprise and start-up. Our digital team has built and integrated sites, systems and apps of all shapes, sizes and functionalities.',
-      tags: ['Cloud services', 'Web development', 'QA support', 'Systems Architecture'],
-      bg: '/assets/images/hero-section.webp',
+        "Global and regional. Public and private. Enterprise and start-up. Our digital team has built and integrated sites, systems and apps of all shapes, sizes and functionalities.",
+      tags: [
+        "Cloud services",
+        "Web development",
+        "QA support",
+        "Systems Architecture",
+      ],
+      bg: "/assets/images/hero-section.webp",
     },
     {
-      title: 'Creative',
+      title: "Creative",
       description:
-        'We produce results-driven creative that informs, inspires and engages. From copy and visual identity to video, motion graphics and digital design.',
-      tags: ['Branding', 'Copywriting', 'UI/UX', 'Animation'],
-      bg: '/assets/images/service_2.webp',
+        "We produce results-driven creative that informs, inspires and engages. From copy and visual identity to video, motion graphics and digital design.",
+      tags: ["Branding", "Copywriting", "UI/UX", "Animation"],
+      bg: "/assets/images/service_2.webp",
     },
     {
-      title: 'Strategy',
+      title: "Strategy",
       description:
-        'To ensure the best possible response and returns for your business, our strategy, analytics and demand generation teams work across every relevant stage of a project.',
-      tags: ['ABM', 'SEO', 'Campaign Strategy', 'Data Reporting'],
-      bg: '/assets/images/service_3.webp',
+        "To ensure the best possible response and returns for your business, our strategy, analytics and demand generation teams work across every relevant stage of a project.",
+      tags: ["ABM", "SEO", "Campaign Strategy", "Data Reporting"],
+      bg: "/assets/images/service_3.webp",
     },
   ];
 
@@ -114,10 +119,12 @@ const Services = () => {
 
     const trigger = ScrollTrigger.create({
       trigger: section,
-      start: 'top top',
-    end: () => `+=${window.innerHeight * (totalSlides - 1)}`,
+      start: "top top+=1", // ensures it pins immediately when section enters
+      end: () => `+=${section.offsetHeight - 1}`, // stops exactly at the end
       pin: true,
+      pinSpacing: true,
       scrub: false,
+      anticipatePin: 1, // helps avoid flicker when pinning starts
       onEnter: () => (wheelEnabled = true),
       onEnterBack: () => (wheelEnabled = true),
       onLeave: () => (wheelEnabled = false),
@@ -151,7 +158,7 @@ const Services = () => {
           setTimeout(() => {
             window.scrollTo({
               top: window.scrollY + window.innerHeight * 0.5,
-              behavior: 'smooth',
+              behavior: "smooth",
             });
           }, 100);
         }
@@ -163,7 +170,7 @@ const Services = () => {
           setTimeout(() => {
             window.scrollTo({
               top: window.scrollY - window.innerHeight * 0.5,
-              behavior: 'smooth',
+              behavior: "smooth",
             });
           }, 100);
         }
@@ -175,22 +182,22 @@ const Services = () => {
         onComplete: () => (isAnimating.current = false),
       });
 
-      tl.to('.bg-img', { opacity: 0, duration: 0.4 });
-      tl.to('.card-content', { opacity: 0, y: 30, duration: 0.3 }, '<');
+      tl.to(".bg-img", { opacity: 0, duration: 0.4 });
+      tl.to(".card-content", { opacity: 0, y: 30, duration: 0.3 }, "<");
 
       tl.add(() => {
         if (bgRef.current) bgRef.current.src = servicesData[index].bg;
         setActiveIndex(index);
       });
 
-      tl.to('.bg-img', { opacity: 1, duration: 0.6 });
-      tl.to('.card-content', { opacity: 1, y: 0, duration: 0.4 }, '<');
+      tl.to(".bg-img", { opacity: 1, duration: 0.6 });
+      tl.to(".card-content", { opacity: 1, y: 0, duration: 0.4 }, "<");
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener("wheel", handleWheel);
       trigger.kill();
     };
   }, [activeIndex]);
@@ -199,7 +206,7 @@ const Services = () => {
     <section
       ref={sectionRef}
       className="relative h-screen w-full overflow-hidden text-white"
-      style={{ position: 'relative', zIndex: 10 }}
+      style={{ position: "relative", zIndex: 10 }}
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -229,8 +236,8 @@ const Services = () => {
               onClick={() => setActiveIndex(i)}
               className={`transition-all duration-300 ${
                 activeIndex === i
-                  ? 'h-12 w-3 rounded-2xl bg-white'
-                  : 'h-3 w-3 rounded-full bg-white/60'
+                  ? "h-12 w-3 rounded-2xl bg-white"
+                  : "h-3 w-3 rounded-full bg-white/60"
               }`}
             />
           ))}

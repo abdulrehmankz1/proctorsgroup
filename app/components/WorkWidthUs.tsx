@@ -21,18 +21,18 @@ const WorkWidthUs = () => {
     const scrollDistance = scrollWidth - viewportWidth + 150;
 
     // Only pin the cards section now
-    gsap.to(scrollContainer, {
-      x: -scrollDistance,
-      ease: "none",
-      scrollTrigger: {
-        trigger: pinSection,
-        start: "top top",
-        end: () => `+=${scrollWidth}`,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-      },
-    });
+    // gsap.to(scrollContainer, {
+    //   x: -scrollDistance,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: pinSection,
+    //     start: "top top",
+    //     end: () => `+=${scrollWidth}`,
+    //     scrub: true,
+    //     pin: true,
+    //     anticipatePin: 1,
+    //   },
+    // });
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
