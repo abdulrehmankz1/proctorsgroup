@@ -1,5 +1,5 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import React, { useRef } from "react";
 
 interface TestimonialCardProps {
@@ -17,21 +17,21 @@ function TestimonialCard({
 }: TestimonialCardProps) {
   const ref = useRef<HTMLDivElement | null>(null);
 
-  // Track scroll position relative to each card
-  const { scrollYProgress } = useScroll({
+  // Keep the scroll tracking if you plan to add other animations later
+  useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  // Scale the width slightly when another card overlaps
-  const scale = useTransform(scrollYProgress, [0, 0.4, 1], [1, 0.9, 1]);
-
   return (
     <motion.div
       ref={ref}
-      style={{ scale }}
-      className={`sticky top-[130px] h-[80vh] section_space bg-[url(${image})] bg-cover bg-center 
-      flex flex-col items-start px-[80px] my-[90px] justify-start text-white rounded-3xl transition-transform duration-500`}
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      className="sticky top-[130px] h-[80vh] section_space flex flex-col items-start px-[80px] my-[90px] justify-start text-white rounded-3xl transition-transform duration-500"
     >
       <div className="w-[30%]">
         <h6 className="eyebrow mb-8">{title}</h6>
