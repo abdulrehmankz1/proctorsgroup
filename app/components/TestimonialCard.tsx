@@ -7,6 +7,7 @@ interface TestimonialCardProps {
   heading: string;
   text: string;
   image: string;
+  index: number;
 }
 
 function TestimonialCard({
@@ -14,10 +15,10 @@ function TestimonialCard({
   heading,
   text,
   image,
+  index,
 }: TestimonialCardProps) {
   const ref = useRef<HTMLDivElement | null>(null);
 
-  // Keep the scroll tracking if you plan to add other animations later
   useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -31,7 +32,9 @@ function TestimonialCard({
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="sticky top-[130px] h-[80vh] section_space flex flex-col items-start px-[80px] my-[90px] justify-start text-white rounded-3xl transition-transform duration-500"
+      className={`sticky top-[130px] h-[80vh] flex flex-col items-start justify-start px-20 section_space text-white rounded-3xl transition-transform duration-500 ${
+        index === 0 ? "mt-0" : "mt-[1vh]"
+      }`}
     >
       <div className="w-[30%]">
         <h6 className="eyebrow mb-8">{title}</h6>

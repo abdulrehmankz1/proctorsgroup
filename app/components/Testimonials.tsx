@@ -66,6 +66,9 @@ const Testimonials = () => {
     },
   ];
 
+  // Adjust height to number of cards minus one to avoid extra scroll gap
+  const totalHeight = `${(testimonials.length - 1) * 100 + 80}vh`;
+
   return (
     <motion.section
       ref={sectionRef}
@@ -73,12 +76,15 @@ const Testimonials = () => {
         backgroundColor: isInViewState ? "#0a0a0a" : "#f8f8f8",
       }}
       transition={{
-        duration: 1.2, // slower fade
-        ease: [0.4, 0, 0.2, 1], // smooth easing curve
+        duration: 1.2,
+        ease: [0.4, 0, 0.2, 1],
       }}
       className="services_section section_space"
     >
-      <div className="relative container mx-auto">
+      <div
+        className="relative container mx-auto"
+        style={{ height: totalHeight }}
+      >
         {testimonials.map((item, index) => (
           <TestimonialCard
             key={index}
@@ -86,6 +92,7 @@ const Testimonials = () => {
             heading={item.heading}
             text={item.text}
             image={item.image}
+            index={index}
           />
         ))}
       </div>
