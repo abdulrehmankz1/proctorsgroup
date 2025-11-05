@@ -26,7 +26,25 @@ const Latest = () => {
             </a>
           </div>
         </div>
-        <LatestCard />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mx-auto">
+          <LatestCard
+            image="/assets/images/hero-section.webp"
+            category="Insights"
+            title="Cost-effective manufacturing marketing: the ultimate guide for 2026"
+          />
+          
+          <LatestCard
+            image="/assets/images/hero-section.webp"
+            category="Trends"
+            title="How automation is reshaping global production strategies ultimate guide for 2026"
+          />
+
+          <LatestCard
+            image="/assets/images/hero-section.webp"
+            category="News"
+            title="Industry leaders share predictions for the next 5 years"
+          />
+        </div>
       </div>
     </section>
   );
