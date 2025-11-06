@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import OurClients from "./components/OurClients";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
+import WhyUs from "./components/WhyUs";
 import WorkWidthUs from "./components/WorkWidthUs";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <ClientsTestimonials />
       <Testimonials />
       <Latest />
+      <WhyUs />
       <HeroVideo />
     </>
   );
