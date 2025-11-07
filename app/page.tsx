@@ -1,5 +1,6 @@
 import About from "./components/About";
 import ClientsTestimonials from "./components/ClientsTestimonials";
+import Gallery from "./components/Gallery";
 import HeroSection from "./components/HeroSection";
 import HeroVideo from "./components/HeroVideo";
 import Latest from "./components/Latest";
@@ -24,6 +25,7 @@ export default function Home() {
       <Testimonials />
       <Latest />
       <WhyUs />
+      <Gallery />
       <HeroVideo />
     </>
   );
