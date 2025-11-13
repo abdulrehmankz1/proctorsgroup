@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Gallery: React.FC = () => {
+const Gallery = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const ref2 = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -155,7 +155,7 @@ const Gallery: React.FC = () => {
             className="sticky top-1/3 left-[6%] z-20 max-w-lg"
           >
             <h1 className="text-[3.2rem] font-light leading-tight">
-              Careers at P+S
+              <strong>Careers</strong> at P+S
             </h1>
             <p className="mt-3 text-lg opacity-80">
               We've got talent for days (decades, actually).
