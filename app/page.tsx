@@ -1,5 +1,6 @@
 import About from "./components/About";
 import ClientsTestimonials from "./components/ClientsTestimonials";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import HeroSection from "./components/HeroSection";
 import HeroVideo from "./components/HeroVideo";
@@ -27,6 +28,7 @@ export default function Home() {
       <WhyUs />
       <Gallery />
       <HeroVideo />
+      <Footer />
     </>
   );
 }
