@@ -62,7 +62,7 @@ const Services = () => {
       onEnterBack: () => (wheelEnabled = true),
       onLeave: () => (wheelEnabled = false),
       onLeaveBack: () => (wheelEnabled = false),
-      markers: true,
+      markers: false,
     });
 
     triggerRef.current = trigger;
@@ -133,6 +133,7 @@ const Services = () => {
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
+      trigger.disable();
       trigger.kill();
     };
   }, [activeIndex]);

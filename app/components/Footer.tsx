@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-6 md:px-16 py-16 container mx-auto">
+    <footer className="bg-black text-white py-16 container mx-auto">
       {/* Top section */}
       <div className="md:flex md:gap-12 border-b border-gray-700 pb-12">
         {/* Left (40%) */}
