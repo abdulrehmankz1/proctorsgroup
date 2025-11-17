@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 container mx-auto">
+    <footer className="bg-dark text-white py-16 container mx-auto">
       {/* Top section */}
       <div className="md:flex md:gap-12 border-b border-gray-700 pb-12">
         {/* Left (40%) */}
@@ -26,50 +26,50 @@ const Footer = () => {
           {/* Navigation Columns */}
           <div className="col-span-2 grid grid-cols-2 gap-6">
             <div className="space-y-3">
-              <Link
+              <a
                 href="/"
                 className="block font-semibold hover:text-gray-300"
               >
                 Home
-              </Link>
-              <Link href="/work" className="block hover:text-gray-300">
+              </a>
+              <a href="/work" className="block hover:text-gray-300">
                 Work
-              </Link>
-              <Link href="/team" className="block hover:text-gray-300">
+              </a>
+              <a href="/team" className="block hover:text-gray-300">
                 Team
-              </Link>
-              <Link href="/why-us" className="block hover:text-gray-300">
+              </a>
+              <a href="/why-us" className="block hover:text-gray-300">
                 Why us?
-              </Link>
-              <Link href="/services" className="block hover:text-gray-300">
+              </a>
+              <a href="/services" className="block hover:text-gray-300">
                 Services
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/proctors-pledge"
                 className="block hover:text-gray-300"
               >
                 Proctors Pledge
-              </Link>
+              </a>
             </div>
             <div className="space-y-3">
-              <Link href="/middle-east" className="block hover:text-gray-300">
+              <a href="/middle-east" className="block hover:text-gray-300">
                 Middle East
-              </Link>
-              <Link href="/north-america" className="block hover:text-gray-300">
+              </a>
+              <a href="/north-america" className="block hover:text-gray-300">
                 North America
-              </Link>
-              <Link href="/csr" className="block hover:text-gray-300">
+              </a>
+              <a href="/csr" className="block hover:text-gray-300">
                 CSR
-              </Link>
-              <Link href="/careers" className="block hover:text-gray-300">
+              </a>
+              <a href="/careers" className="block hover:text-gray-300">
                 Careers
-              </Link>
-              <Link href="/knowledge" className="block hover:text-gray-300">
+              </a>
+              <a href="/knowledge" className="block hover:text-gray-300">
                 Knowledge
-              </Link>
-              <Link href="/contact" className="block hover:text-gray-300">
+              </a>
+              <a href="/contact" className="block hover:text-gray-300">
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
 
