@@ -2,6 +2,8 @@ import React from 'react'
 import HeroSection from './components/HeroSection'
 import About from './components/About'
 import WhyVideo from './components/WhyVideo'
+import WhyUs from './components/WhyUs'
+import WeDo from './components/WeDo'
 
 const page = () => {
   return (
@@ -9,6 +11,8 @@ const page = () => {
       <HeroSection />
       <About />
       <WhyVideo />
+      <WhyUs />
+      <WeDo />
     </>
   )
 }

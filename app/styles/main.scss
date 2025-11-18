@@ -228,6 +228,12 @@ p {
   font-weight: 300;
 }
 
+.text-28 {
+  font-size: 28px;
+  line-height: 1.55;
+  font-weight: 300;
+}
+
 .service_card_text {
   font-size: 16px !important;
   font-family: "Nort", sans-serif;
@@ -235,7 +241,8 @@ p {
   line-height: 1.6;
   font-weight: 300;
 }
-.text_eyebrow{
+
+.text_eyebrow {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 500;
@@ -366,6 +373,10 @@ p {
   padding-block: 160px;
 }
 
+.white_pure {
+  background-color: $white-pure;
+}
+
 .about_section {
   background-color: $white-pure;
 
@@ -438,6 +449,9 @@ p {
 .black_pure_text {
   color: $black-pure;
 }
+.font_bold {
+  font-weight: 500 !important;
+}
 
 .info-box {
   background-color: rgba(0, 0, 0, 0.2);
@@ -475,5 +489,123 @@ p {
     opacity: 0.2;
     transition: opacity 0.3s ease-out;
     white-space: pre;
+  }
+}
+
+.why_us_box {
+  border: 1px solid #ffffff14;
+  background-color: #ffffff14;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.why_us_box_text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Clock seconds */
+@keyframes rotateFast {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Clock minutes */
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Horizontal line wiggle */
+@keyframes horizontalWiggle {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Default color */
+.check-icon {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* On hover of parent box */
+.why_us_box:hover .check-icon {
+  color: $yellow-primary;
+}
+
+.why_us_box:hover .minute-hand {
+  transform-origin: 128px 128px;
+  animation: rotateSlow 12s linear infinite;
+}
+
+.why_us_box:hover .second-hand {
+  transform-origin: 128px 128px;
+  animation: rotateFast 2s linear infinite;
+}
+
+.why_us_box:hover .top-line {
+  animation: horizontalWiggle 1.2s ease-in-out infinite;
+}
+
+.why_us_box {
+  cursor: pointer;
+
+  svg {
+    transition: stroke 0.4s ease, transform 0.4s ease;
+    stroke: #f8f8f8; // default stroke color
+  }
+
+  &:hover svg {
+    transform: scale(1.08);
+  }
+
+  &:hover svg path {
+    stroke: $yellow-primary; // path color on hover
+    animation: icon-draw 2.4s linear infinite; // increased duration for pause
+  }
+}
+
+@keyframes icon-draw {
+  0% {
+    stroke-dasharray: 4 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 200 4;
+    stroke-dashoffset: -40;
+  }
+
+  58% {
+    stroke-dasharray: 200 4;
+    stroke-dashoffset: -40;
+  }
+
+  100% {
+    stroke-dasharray: 200 4;
+    stroke-dashoffset: -40;
   }
 }
