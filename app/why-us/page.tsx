@@ -5,6 +5,7 @@ import WhyVideo from "./components/WhyVideo";
 import WhyUs from "./components/WhyUs";
 import WeDo from "./components/WeDo";
 import Team from "./components/Team";
+import OurValues from "./components/OurValues";
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <WhyUs />
       <WeDo />
       <Team />
+      <OurValues />
     </>
   );
 };
