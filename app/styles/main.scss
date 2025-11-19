@@ -449,6 +449,7 @@ p {
 .black_pure_text {
   color: $black-pure;
 }
+
 .font_bold {
   font-weight: 500 !important;
 }
@@ -607,5 +608,40 @@ p {
   100% {
     stroke-dasharray: 200 4;
     stroke-dashoffset: -40;
+  }
+}
+
+.team_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid #ffffff14;
+  background-color: #ffffff14;
+  border-radius: 12px;
+
+  .team_content {
+    gap: 32px;
+    padding: 32px;
+
+    .team_role {
+      font-size: 14px;
+      color: $white-pure;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.08rem;
+      margin-bottom: 3px;
+    }
+
+    .team_name {
+      font-size: 1.75rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: $white-pure;
+    }
+  }
+  .team_image {
+    padding-inline: 32px;
+    width: 100%;
   }
 }
