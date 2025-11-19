@@ -1,3 +1,4 @@
+import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -31,6 +32,14 @@ const WeDo: React.FC = () => {
               websites, target new audiences, integrate high-performing
               marketing systems and much, much more.
             </p>
+            <div>
+              <a href="/" className="arow_link mt-12 black_pure_text">
+                <span>Explore our services</span>
+                <span className="icon">
+                  <MoveRight />
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
