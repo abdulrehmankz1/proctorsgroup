@@ -6,6 +6,8 @@ import WhyUs from "./components/WhyUs";
 import WeDo from "./components/WeDo";
 import Team from "./components/Team";
 import OurValues from "./components/OurValues";
+import Testimonials from "./components/Testimonials";
+import OurCSR from "./components/OurCSR";
 
 const page = () => {
   return (
@@ -17,6 +19,8 @@ const page = () => {
       <WeDo />
       <Team />
       <OurValues />
+      <Testimonials />
+      <OurCSR />
     </>
   );
 };

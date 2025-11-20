@@ -8,6 +8,7 @@ import {
   SomeSVG4,
   SomeSVG5,
 } from "./OurValuesSVGs";
+import { MoveRight } from "lucide-react";
 
 const valuesData = [
   {
@@ -90,16 +91,24 @@ const OurValues = () => {
                 </div>
               );
             })}
+            <div>
+               <a href="/" className="arow_link mt-12 black_pure_text">
+                <span>Explore our services</span>
+                <span className="icon">
+                  <MoveRight />
+                </span>
+              </a>
+            </div>
           </div>
 
           <div className="w-[70%] sticky top-24 h-fit">
             <div className="h-[90vh]">
               <Image
-                src="/assets/images/hero-section.webp"
+                src="/assets/images/our-value.webp"
                 alt="Our Values"
                 width={800}
                 height={500}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-3xl"
                 draggable={false}
               />
             </div>

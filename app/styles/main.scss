@@ -11,56 +11,64 @@ $gray-light: #e3e3e3;
 // Gotham Font Faces
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf")
+    format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf")
+    format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf")
+    format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf") format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf")
+    format("opentype");
   font-weight: 900;
   font-style: normal;
 }
@@ -82,7 +90,8 @@ $gray-light: #e3e3e3;
 
 @font-face {
   font-family: "Nort";
-  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf") format("opentype");
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
 }
@@ -290,14 +299,16 @@ p {
 
   .logo-overlay {
     z-index: 10;
-    background-image: linear-gradient(90deg,
-        #0a0a0a,
-        #0a0a0a8c 10%,
-        #0a0a0a14 30%,
-        #0a0a0a00 50%,
-        #0a0a0a0d 70%,
-        #0a0a0a8c 90%,
-        #0a0a0a);
+    background-image: linear-gradient(
+      90deg,
+      #0a0a0a,
+      #0a0a0a8c 10%,
+      #0a0a0a14 30%,
+      #0a0a0a00 50%,
+      #0a0a0a0d 70%,
+      #0a0a0a8c 90%,
+      #0a0a0a
+    );
     width: 100%;
     height: 100%;
     position: absolute;
@@ -452,8 +463,8 @@ p {
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.7s ease,
     backdrop-filter 2s ease 0.5s,
-    /* Gradual blur increase over 2s, starting after 0.5s */
-    -webkit-backdrop-filter 2s ease 0.5s;
+    /* Gradual blur increase over 2s, starting after 0.5s */ -webkit-backdrop-filter
+      2s ease 0.5s;
   /* Same for webkit */
 
   will-change: transform, opacity, backdrop-filter, -webkit-backdrop-filter;
@@ -693,5 +704,59 @@ p {
 
   100% {
     stroke-dashoffset: 500;
+  }
+}
+
+.testimonials_section {
+  background-color: $black-pure;
+
+  .testimonials_text {
+    font-size: 65px;
+    color: $white-pure;
+    line-height: 1.2;
+    font-weight: 200;
+    opacity: 1;
+    flex-wrap: wrap;
+
+    .word {
+      display: inline-block;
+      opacity: 0.2;
+      transition: opacity 0.3s ease-out;
+      white-space: pre;
+    }
+  }
+
+  .client_name {
+    letter-spacing: 0.08rem;
+    -webkit-text-stroke-color: #fff;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: "Gotham", sans-serif;
+  }
+
+  .company_name {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: gray;
+    font-family: "Nort", sans-serif;
+  }
+}
+
+.csr_content {
+  border-radius: 2rem;
+  background-image: linear-gradient(to right, #000000cc, #0006 69%, #00000066),
+    url("../../public/assets/images/our-csr.webp");
+  padding: 16rem 4rem 4rem;
+
+  .csr_content_inner{
+    border-radius: 1.5rem;
+        border: .0625rem solid #ffffff14;
+    background-color: #ffffff14;
+    opacity: 1;
+    -webkit-backdrop-filter: blur(1.25rem);
+    backdrop-filter: blur(1.25rem);
+    padding: 3rem 2rem;
   }
 }
