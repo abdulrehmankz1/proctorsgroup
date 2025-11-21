@@ -11,64 +11,56 @@ $gray-light: #e3e3e3;
 // Gotham Font Faces
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Black/Gotham Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Bold/Gotham Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Book/gotham_book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Extra Light/Gotham Extra Light.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Light/Gotham Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Medium/Gotham Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Thin/Gotham Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf")
-    format("opentype");
+  src: url("/assets/fonts/gotham/Gotham Ultra/Gotham Ultra.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
@@ -90,8 +82,7 @@ $gray-light: #e3e3e3;
 
 @font-face {
   font-family: "Nort";
-  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf")
-    format("opentype");
+  src: url("/assets/fonts/nort/fonnts.com-Nort_Extralight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
@@ -299,16 +290,14 @@ p {
 
   .logo-overlay {
     z-index: 10;
-    background-image: linear-gradient(
-      90deg,
-      #0a0a0a,
-      #0a0a0a8c 10%,
-      #0a0a0a14 30%,
-      #0a0a0a00 50%,
-      #0a0a0a0d 70%,
-      #0a0a0a8c 90%,
-      #0a0a0a
-    );
+    background-image: linear-gradient(90deg,
+        #0a0a0a,
+        #0a0a0a8c 10%,
+        #0a0a0a14 30%,
+        #0a0a0a00 50%,
+        #0a0a0a0d 70%,
+        #0a0a0a8c 90%,
+        #0a0a0a);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -427,9 +416,9 @@ p {
   // hover effect
   &:hover {
     &::after {
-      transform: scaleX(1.2);
       height: 1.5px;
       background-color: $yellow-primary;
+      transform: translateX(4px) scaleX(1.08);
     }
 
     .icon {
@@ -442,7 +431,6 @@ p {
     align-items: center;
     transition: transform 0.3s ease;
     transform-origin: center;
-    opacity: 0.5;
   }
 }
 
@@ -463,8 +451,8 @@ p {
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.7s ease,
     backdrop-filter 2s ease 0.5s,
-    /* Gradual blur increase over 2s, starting after 0.5s */ -webkit-backdrop-filter
-      2s ease 0.5s;
+    /* Gradual blur increase over 2s, starting after 0.5s */
+    -webkit-backdrop-filter 2s ease 0.5s;
   /* Same for webkit */
 
   will-change: transform, opacity, backdrop-filter, -webkit-backdrop-filter;
@@ -750,9 +738,9 @@ p {
     url("../../public/assets/images/our-csr.webp");
   padding: 16rem 4rem 4rem;
 
-  .csr_content_inner{
+  .csr_content_inner {
     border-radius: 1.5rem;
-        border: .0625rem solid #ffffff14;
+    border: 0.0625rem solid #ffffff14;
     background-color: #ffffff14;
     opacity: 1;
     -webkit-backdrop-filter: blur(1.25rem);
