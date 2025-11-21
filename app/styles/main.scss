@@ -655,3 +655,108 @@ p {
     width: 100%;
   }
 }
+
+.our_value_card {
+  padding-block: 80px;
+  border-bottom: 1px solid $black-pure;
+  cursor: pointer;
+
+  .value_title {
+    color: $black-pure;
+    margin-bottom: 10px;
+  }
+
+  .value_description {
+    color: $black-pure;
+    font-size: 14px;
+  }
+
+  .value_svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+
+    path {
+      stroke: black;
+      fill: none;
+      stroke-width: 10;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 0;
+      transition: stroke 0.5s ease;
+    }
+  }
+
+  &:hover .value_svg path {
+    stroke: black;
+    animation: drawLoop 2s linear infinite;
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes drawLoop {
+  0% {
+    stroke-dashoffset: 500;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 500;
+  }
+}
+
+.testimonials_section {
+  background-color: $black-pure;
+
+  .testimonials_text {
+    font-size: 65px;
+    color: $white-pure;
+    line-height: 1.2;
+    font-weight: 200;
+    opacity: 1;
+    flex-wrap: wrap;
+
+    .word {
+      display: inline-block;
+      opacity: 0.2;
+      transition: opacity 0.3s ease-out;
+      white-space: pre;
+    }
+  }
+
+  .client_name {
+    letter-spacing: 0.08rem;
+    -webkit-text-stroke-color: #fff;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: "Gotham", sans-serif;
+  }
+
+  .company_name {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: gray;
+    font-family: "Nort", sans-serif;
+  }
+}
+
+.csr_content {
+  border-radius: 2rem;
+  background-image: linear-gradient(to right, #000000cc, #0006 69%, #00000066),
+    url("../../public/assets/images/our-csr.webp");
+  padding: 16rem 4rem 4rem;
+
+  .csr_content_inner{
+    border-radius: 1.5rem;
+        border: .0625rem solid #ffffff14;
+    background-color: #ffffff14;
+    opacity: 1;
+    -webkit-backdrop-filter: blur(1.25rem);
+    backdrop-filter: blur(1.25rem);
+    padding: 3rem 2rem;
+  }
+}
